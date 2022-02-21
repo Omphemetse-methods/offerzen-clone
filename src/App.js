@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.scss";
 
+// Candidate
 import Layout from "./container/Layout";
 import LandingPage from "./pages/LandingPage";
 import Dashboard from "./pages/Dashboard";
@@ -10,8 +11,14 @@ import InterviewRequestsLayout from "./container/InterviewRequestsLayout";
 import InterviewRequests from "./pages/InterviewRequests";
 import InterviewRequestHistory from "./pages/InterviewRequestHistory";
 import InterviewRequestHistoryTalentAdvisor from "./pages/InterviewRequestHistoryTalentAdvisor";
+import CandidateProfile from "./pages/candidate/Profile";
+
+// Talent Advisor
+
+// Company
 
 import Login from "./pages/Login";
+import NoMatch from "./pages/NoMatch";
 
 const App = () => {
   return (
@@ -37,7 +44,11 @@ const App = () => {
               element={<InterviewRequestHistoryTalentAdvisor />}
             />
           </Route>
+
+          <Route path="profile" element={<CandidateProfile />} />
         </Route>
+
+        <Route path="*" element={<NoMatch />} />
       </Routes>
     </BrowserRouter>
   );

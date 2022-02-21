@@ -17,7 +17,7 @@ const Header = (props) => {
         <section className="flex items-center justify-between space-x-4 text-white">
           <p className="text-xs">You are not visible to companies</p>
           <Link to="">Dashboard</Link>
-          <p>Profile</p>
+          <Link to="profile">Profile</Link>
           <Link to="interview_requests">Interviews</Link>
           <p>Calendar</p>
           <p>More</p>
